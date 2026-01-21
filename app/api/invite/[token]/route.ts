@@ -32,7 +32,8 @@ export async function GET(
       maxAge: 60 * 60 * 24 * 30, // 30 days
     });
 
-    response.cookies.set("guest_name", guest.name, {
+    // URL encode the guest name to handle Unicode (Khmer) characters
+    response.cookies.set("guest_name", encodeURIComponent(guest.name), {
       httpOnly: false, // Need to read on client
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
