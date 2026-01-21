@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Hero({
-  guestName = "លោក នួន​ ហុកសេង​ នឹង​ ភរិយា",
+  guestName = "",
 }: {
   guestName?: string;
 }) {

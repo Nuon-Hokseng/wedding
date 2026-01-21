@@ -84,6 +84,23 @@ export default async function InvitePage({
     redirect(redirectUrl);
   } catch (err) {
     console.error("Unexpected error:", err);
-    redirect("/?error=unexpected");
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+        <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl">
+          <h1 className="text-2xl font-bold text-red-600 mb-4">Unexpected Error</h1>
+          <div className="space-y-2 text-sm">
+            <p><strong>Error:</strong> {errorMessage}</p>
+            <p><strong>Error Type:</strong> {err instanceof Error ? err.constructor.name : typeof err}</p>
+            <pre className="bg-gray-100 p-2 rounded text-xs overflow-auto">
+              {err instanceof Error ? err.stack : JSON.stringify(err, null, 2)}
+            </pre>
+            <a href="/" className="inline-block mt-4 px-4 py-2 bg-rose-500 text-white rounded">
+              Go Home
+            </a>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
