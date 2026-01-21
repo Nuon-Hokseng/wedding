@@ -240,7 +240,7 @@ export default function RSVP({
         {/* Call to action */}
         <div className="text-center mt-12">
           <p className="text-sm md:text-base text-gray-600">
-            ចង់បានវេបសាយចឹងដែរមែន?{" "}
+            ចង់បានវេបសាយចឹងដែរអត់?{" "}
             <span className="text-rose-600 font-semibold">
               ទំនាក់ទំនងមកពួកយើងតាមតេឡេក្រាម 0974242016
             </span>
