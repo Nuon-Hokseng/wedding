@@ -182,7 +182,9 @@ export default function OurStory() {
                   className={`flex gap-8 md:gap-0 md:mb-12 relative ${
                     index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
-                >                  {/* Content */}
+                >
+                  {" "}
+                  {/* Content */}
                   <div
                     className={`pt-10 w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"}`}
                   >
@@ -204,7 +206,6 @@ export default function OurStory() {
                       </p>
                     </div>
                   </div>
-
                   {/* Center dot */}
                   <div className="flex justify-center md:w-auto absolute left-2 md:relative md:transform md:translate-x-0">
                     <div
