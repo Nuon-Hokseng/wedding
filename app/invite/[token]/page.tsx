@@ -87,7 +87,7 @@ export default async function InvitePage({
     if (err instanceof Error && err.message === "NEXT_REDIRECT") {
       throw err;
     }
-    
+
     console.error("Unexpected error:", err);
     const errorMessage = err instanceof Error ? err.message : String(err);
     return (
