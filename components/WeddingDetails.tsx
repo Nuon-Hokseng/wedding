@@ -122,7 +122,7 @@ export default function WeddingDetails() {
                     នៅវេលាថ្ងៃទី
                   </p>
                   <p className="text-gray-600 text-md md:text-sm xl:text-lg">
-                    សៅរ៏, មេសា ២៤, ២០២៦
+                    សៅរ៏, មេសា ២៥, ២០២៦
                   </p>
                 </div>
               </div>
