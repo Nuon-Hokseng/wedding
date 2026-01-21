@@ -6,7 +6,6 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { supabase } from "@/lib/supabase";
 
 interface RSVPFormData {
-  name: string;
   guests: number;
   attending: boolean;
   wishes: string;
@@ -34,7 +33,6 @@ export default function RSVP({
   });
 
   const [formData, setFormData] = useState<RSVPFormData>({
-    name: "",
     guests: 1,
     attending: true,
     wishes: "",
@@ -57,7 +55,7 @@ export default function RSVP({
         const { error } = await supabase.from("wishes_feed").insert([
           {
             guest_id: guestId,
-            name: formData.name || guestName,
+            name: guestName,
             number_of_guests: formData.guests,
             will_attend: formData.attending,
             message: formData.wishes,
@@ -74,7 +72,7 @@ export default function RSVP({
 
       // Also call the parent callback for local state
       onWishSubmit({
-        name: formData.name || "Anonymous Guest",
+        name: guestName,
         message: formData.wishes,
         guests: formData.guests,
         attending: formData.attending,
@@ -84,7 +82,6 @@ export default function RSVP({
       setTimeout(() => {
         setSubmitted(false);
         setFormData({
-          name: "",
           guests: 1,
           attending: true,
           wishes: "",
@@ -119,22 +116,6 @@ export default function RSVP({
           }`}
         >
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name Field */}
-            <div>
-              <label className="block text-xs md:text-sm font-khmer text-gray-700 mb-2">
-                ឈ្មោះរបស់អ្នក
-              </label>
-              <input
-                type="text"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                placeholder="វ៉ន វីវ៉ា"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-              />
-            </div>
-
             {/* Number of Guests */}
             <div>
               <label className="block text-xs md:text-sm font-khmer text-gray-700 mb-2">
