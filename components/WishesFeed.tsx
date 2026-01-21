@@ -48,14 +48,25 @@ export default function WishesFeed() {
           setDisplayedWishes([]);
         } else if (data && data.length > 0) {
           console.log("✅ Successfully fetched wishes:", data.length);
-          console.log("📝 Wishes data:", data);
-          const formattedWishes = data.map((wish: any) => ({
-            id: wish.id.toString(),
-            name: wish.name || "Anonymous",
-            message: wish.message || "",
-            timestamp: new Date(wish.created_at).getTime(),
-          }));
+          console.log("📝 Raw wishes data:", data);
+          const formattedWishes = data.map((wish: any) => {
+            const formatted = {
+              id: wish.id?.toString() || "",
+              name: wish.name || "Anonymous",
+              message: wish.message || "",
+              timestamp: wish.created_at
+                ? new Date(wish.created_at).getTime()
+                : Date.now(),
+            };
+            console.log("🔧 Formatted wish:", formatted);
+            return formatted;
+          });
+          console.log("📋 All formatted wishes:", formattedWishes);
           setDisplayedWishes(formattedWishes);
+          console.log(
+            "✨ State updated with wishes, displayedWishes should now have length:",
+            formattedWishes.length,
+          );
         } else {
           console.log("ℹ️ No wishes found in the database");
           console.log("📊 Data returned:", data);
@@ -96,6 +107,14 @@ export default function WishesFeed() {
     };
   }, []);
 
+  // Monitor state changes
+  useEffect(() => {
+    console.log("🎯 displayedWishes state updated:", {
+      count: displayedWishes.length,
+      wishes: displayedWishes,
+    });
+  }, [displayedWishes]);
+
   const formatTime = (timestamp: number) => {
     const now = Date.now();
     const diff = now - timestamp;
@@ -109,6 +128,13 @@ export default function WishesFeed() {
     if (minutes > 0) return `${minutes}m ago`;
     return "just now";
   };
+
+  console.log("🎨 Rendering WishesFeed with state:", {
+    loading,
+    wishCount: displayedWishes.length,
+    showWishes: !loading && displayedWishes.length > 0,
+    displayedWishes,
+  });
 
   return (
     <section
