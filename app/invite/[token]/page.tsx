@@ -31,4 +31,3 @@ export default async function InvitePage({
   console.log("Redirecting to:", redirectUrl);
   redirect(redirectUrl);
 }
-}
