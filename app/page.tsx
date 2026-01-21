@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -11,7 +11,7 @@ import RSVP from "@/components/RSVP";
 import WishesFeed from "@/components/WishesFeed";
 import { supabase } from "@/lib/supabase";
 
-export default function Home() {
+function HomeContent() {
   const searchParams = useSearchParams();
   const guestName = searchParams.get("guest") || "លោក នួន​ ហុកសេង​ នឹង​ ភរិយា";
   const guestId = searchParams.get("guestId")
@@ -243,5 +243,13 @@ export default function Home() {
         <WishesFeed wishes={wishes} />
       </main>
     </>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-rose-50" />}>
+      <HomeContent />
+    </Suspense>
   );
 }
