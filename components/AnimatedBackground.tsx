@@ -62,7 +62,7 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden -z-20">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-rose-50 to-amber-50" />
+      <div className="absolute inset-0 bg-linear-to-br from-white via-rose-50 to-amber-50" />
 
       {/* Animated elements */}
       {elements.map((element) => (

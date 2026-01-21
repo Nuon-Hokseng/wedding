@@ -66,7 +66,7 @@ export default function RSVP({
     <section
       id="rsvp"
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-gradient-to-b from-white to-rose-50 scroll-mt-24 md:scroll-mt-32"
+      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white to-rose-50 scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
@@ -172,7 +172,7 @@ export default function RSVP({
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-rose-500 to-rose-600 text-white py-4 rounded-lg font-bold text-lg hover:from-rose-600 hover:to-rose-700 transition shadow-lg"
+              className="w-full bg-linear-to-r from-rose-500 to-rose-600 text-white py-4 rounded-lg font-bold text-lg hover:from-rose-600 hover:to-rose-700 transition shadow-lg"
             >
               {submitted ? "✓ Message Sent!" : "Send My RSVP & Wishes"}
             </button>

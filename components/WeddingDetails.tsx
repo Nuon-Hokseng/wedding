@@ -78,7 +78,7 @@ export default function WeddingDetails() {
         {/* Countdown Timer */}
         <div
           ref={countdownRef}
-          className={`bg-gradient-to-r from-rose-50 to-amber-50 rounded-2xl p-8 md:p-12 mb-16 border border-rose-200 scroll-transition ${
+          className={`bg-linear-to-r from-rose-50 to-amber-50 rounded-2xl p-8 md:p-12 mb-16 border border-rose-200 scroll-transition ${
             countdownVisible ? "scroll-animate-scale" : "scroll-hidden-scale"
           }`}
         >

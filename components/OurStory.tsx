@@ -117,13 +117,13 @@ export default function OurStory() {
           {/* Vertical line */}
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-1 h-full bg-rose-100 rounded-full overflow-hidden">
             <div
-              className="absolute left-0 top-0 w-full bg-gradient-to-b from-rose-400 via-amber-300 to-rose-200 transition-[height] duration-300"
+              className="absolute left-0 top-0 w-full bg-linear-to-b from-rose-400 via-amber-300 to-rose-200 transition-[height] duration-300"
               style={{ height: `${Math.max(10, lineProgress * 100)}%` }}
             />
           </div>
           <div className="md:hidden absolute left-8 top-0 w-0.5 h-full bg-rose-100 rounded-full overflow-hidden">
             <div
-              className="absolute left-0 top-0 w-full bg-gradient-to-b from-rose-400 via-amber-300 to-rose-200 transition-[height] duration-300"
+              className="absolute left-0 top-0 w-full bg-linear-to-b from-rose-400 via-amber-300 to-rose-200 transition-[height] duration-300"
               style={{ height: `${Math.max(10, lineProgress * 100)}%` }}
             />
           </div>
@@ -147,7 +147,7 @@ export default function OurStory() {
                     className={`pt-10 w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"}`}
                   >
                     <div
-                      className={`bg-gradient-to-br from-rose-50 to-amber-50 rounded-lg p-6 border border-rose-200 transition-all duration-700 ease-out ${
+                      className={`bg-linear-to-br from-rose-50 to-amber-50 rounded-lg p-6 border border-rose-200 transition-all duration-700 ease-out ${
                         visibleMap[index]
                           ? "opacity-100 translate-y-0 translate-x-0 shadow-lg"
                           : index % 2 === 0
@@ -169,7 +169,7 @@ export default function OurStory() {
                   </div>
 
                   {/* Center dot */}
-                  <div className="flex justify-center md:w-auto absolute left-2 md:static md:relative md:transform md:translate-x-0">
+                  <div className="flex justify-center md:w-auto absolute left-2 md:relative md:transform md:translate-x-0">
                     <div
                       className={`w-15 h-15 md:w-16 md:h-16 bg-white border-4 border-rose-400 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-lg z-10 transition-all duration-700 ease-out ${
                         visibleMap[index]

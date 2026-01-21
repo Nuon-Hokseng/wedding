@@ -58,7 +58,7 @@ export default function WishesFeed({ wishes }: { wishes: Wish[] }) {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-gradient-to-b from-rose-50 via-white to-white"
+      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-rose-50 via-white to-white"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
@@ -76,19 +76,19 @@ export default function WishesFeed({ wishes }: { wishes: Wish[] }) {
               statsVisible ? "scroll-animate-scale" : "scroll-hidden-scale"
             }`}
           >
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-lg p-6 border border-rose-200 text-center">
+            <div className="bg-linear-to-br from-rose-50 to-pink-50 rounded-lg p-6 border border-rose-200 text-center">
               <p className="text-4xl font-bold text-rose-600">
                 {displayedWishes.length}
               </p>
               <p className="text-gray-600 font-medium mt-1">Total Wishes</p>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border border-green-200 text-center">
+            <div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-lg p-6 border border-green-200 text-center">
               <p className="text-4xl font-bold text-green-600">
                 {attendingCount}
               </p>
               <p className="text-gray-600 font-medium mt-1">Guests Attending</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6 border border-blue-200 text-center">
+            <div className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-lg p-6 border border-blue-200 text-center">
               <p className="text-4xl font-bold text-blue-600">{totalGuests}</p>
               <p className="text-gray-600 font-medium mt-1">Total Guests</p>
             </div>

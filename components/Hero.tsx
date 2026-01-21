@@ -92,7 +92,7 @@ export default function Hero() {
         {/* Right: Photo with Effects */}
         <div
           ref={photoRef}
-          className={`relative h-96 md:h-[500px] rounded-2xl overflow-visible scroll-transition ${
+          className={`relative h-96 md:h-125 rounded-2xl overflow-visible scroll-transition ${
             photoVisible ? "scroll-animate-fade-right" : "scroll-hidden-right"
           }`}
         >
@@ -122,7 +122,7 @@ export default function Hero() {
           </div>
 
           {/* Gold overlay effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-amber-400/20 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-t from-amber-400/20 via-transparent to-transparent pointer-events-none" />
 
           {/* Glowing border effect */}
           <div className="absolute inset-0 rounded-2xl border-4 border-amber-300/40 pointer-events-none shadow-lg shadow-amber-300/30" />

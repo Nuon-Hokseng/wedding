@@ -48,7 +48,7 @@ export default function PhotoGallery() {
     <section
       id="gallery"
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-gradient-to-b from-white via-rose-50 to-white scroll-mt-24 md:scroll-mt-32"
+      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white via-rose-50 to-white scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
@@ -66,7 +66,7 @@ export default function PhotoGallery() {
               imageVisible ? "scroll-animate-fade-left" : "scroll-hidden-left"
             }`}
           >
-            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-96 md:h-125 rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={photos[selectedIndex].src || "/placeholder.svg"}
                 alt={photos[selectedIndex].title}
@@ -77,11 +77,11 @@ export default function PhotoGallery() {
               {/* Decorative elements */}
               <div className="absolute top-4 left-4 text-5xl">💕</div>
               <div className="absolute bottom-4 right-4 text-4xl">✨</div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
             </div>
 
             {/* Year & Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+            <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 text-white">
               <p className="text-5xl font-bold">{photos[selectedIndex].year}</p>
               <p className="text-xl">{photos[selectedIndex].title}</p>
             </div>
@@ -179,7 +179,7 @@ export default function PhotoGallery() {
                 <div
                   key={index}
                   onClick={() => setSelectedCollageIndex(index)}
-                  className={`relative rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300 ${colSpan} ${rowSpan} bg-gradient-to-br from-rose-100 to-amber-100`}
+                  className={`relative rounded-xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300 ${colSpan} ${rowSpan} bg-linear-to-br from-rose-100 to-amber-100`}
                 >
                   <Image
                     src={photo.src || "/placeholder.svg"}
@@ -189,7 +189,7 @@ export default function PhotoGallery() {
                   />
 
                   {/* Elegant overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-end justify-end p-4">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-end justify-end p-4">
                     <p className="text-white font-semibold text-lg">
                       {photo.title}
                     </p>
@@ -214,7 +214,7 @@ export default function PhotoGallery() {
               className="relative w-full max-w-2xl rounded-2xl overflow-hidden bg-white shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative h-96 md:h-[600px]">
+              <div className="relative h-96 md:h-150">
                 <Image
                   src={
                     collagePhotos[selectedCollageIndex]?.src ||
@@ -226,7 +226,7 @@ export default function PhotoGallery() {
                 />
               </div>
 
-              <div className="p-6 bg-gradient-to-b from-white to-rose-50">
+              <div className="p-6 bg-linear-to-b from-white to-rose-50">
                 <h4 className="text-2xl font-bold text-gray-800 mb-2">
                   {collagePhotos[selectedCollageIndex]?.title}
                 </h4>
