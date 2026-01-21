@@ -56,13 +56,9 @@ export default function PhotoGallery() {
       className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white via-rose-50 to-white scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
-          Our Moments Together
+        <h2 className="text-xl xl:text-5xl md:text-3xl font-khmer text-center mb-4 text-rose-600">
+          កម្រងរូបភាព
         </h2>
-        <p className="text-center text-lg text-gray-600 mb-12">
-          A journey through years of love and laughter
-        </p>
-
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Main Photo */}
           <div
@@ -150,12 +146,9 @@ export default function PhotoGallery() {
             collageVisible ? "scroll-animate-fade-up" : "scroll-hidden"
           }`}
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-            Our Beautiful Collection
+          <h3 className="text-xl xl:text-5xl md:text-3xl font-khmer text-center mb-4 text-rose-600">
+            រូបភាព Pre-Wedding ស្អាតៗ
           </h3>
-          <p className="text-center text-lg text-gray-600 mb-12">
-            Precious moments captured through the lens of love
-          </p>
 
           {/* Elegant Masonry Grid Collage */}
           <div

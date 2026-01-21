@@ -161,10 +161,10 @@ export default function Home() {
             />
             <div className="space-y-2">
               <p className="text-lg font-medium tracking-wide text-gray-800">
-                A special note awaits
+                អីយ៉ាស! មានសារគេផ្ញេីរមកមួយនេះ!
               </p>
               <p className="text-sm text-gray-600">
-                Tap the envelope to join Phorn & Mey&apos;s celebration
+                សាកចុចមេីលមេីល
               </p>
             </div>
             <button
@@ -172,7 +172,7 @@ export default function Home() {
               onClick={handleOpen}
               className="inline-flex items-center justify-center rounded-full bg-rose-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-rose-200 transition hover:scale-105 hover:bg-rose-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:ring-offset-2"
             >
-              click me to open
+              ចុចខ្ញុំដើម្បីបើក
             </button>
           </div>
         </div>

@@ -131,12 +131,9 @@ export default function OurStory() {
       className="w-full py-20 px-4 md:px-8 bg-white scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
-          Our Story
+        <h2 className="text-xl xl:text-5xl md:text-3xl font-khmer pb-10 text-center mb-4 text-rose-600">
+          ដែរឆ្ងល់អត់ថាពួកយេីងស្គាល់គ្នាតាំងពីពេលណា?
         </h2>
-        <p className="text-center text-lg text-gray-600 mb-16">
-          A timeline of our beautiful journey together
-        </p>
 
         {/* Timeline */}
         <div ref={timelineRef} className="relative">
@@ -226,11 +223,8 @@ export default function OurStory() {
 
         {/* Heart message */}
         <div className="text-center mt-16">
-          <p className="text-2xl font-semibold text-rose-600 mb-2">
-            Our greatest story is just beginning
-          </p>
-          <p className="text-gray-600">
-            And you're invited to be a part of it! 💕
+          <p className="text-xl xl:text-3xl md:text-3xl font-khmer text-rose-600 ">
+            ទោះបីជាពួកយេីងស្រលាញ់គ្នាបានរយះពេលយូរជាង ៤​ ឆ្នាំក៏ដោយ​ យេីងចាត់ទុកវាគ្រាន់តែជាការចាប់ផ្ដេីមប៉ុណ្ណោះ💕
           </p>
         </div>
       </div>

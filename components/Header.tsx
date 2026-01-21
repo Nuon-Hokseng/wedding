@@ -11,7 +11,7 @@ export default function Header({ coupleNames }: { coupleNames: string }) {
             <p className="text-xs text-gray-500">April 25, 2026</p>
           </div>
         </div>
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+        <nav className="hidden md:flex gap-8 text-sm font-khmer text-gray-600">
           <a href="#details" className="hover:text-rose-600 transition">
             ព័ត៌មានពីពិធីមង្គលការ
           </a>

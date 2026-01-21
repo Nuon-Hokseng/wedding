@@ -31,7 +31,7 @@ export default function RSVP({
   });
 
   const [formData, setFormData] = useState<RSVPFormData>({
-    name: guestName,
+    name: "",
     guests: 1,
     attending: true,
     wishes: "",
@@ -54,7 +54,7 @@ export default function RSVP({
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
-        name: guestName,
+        name: "",
         guests: 1,
         attending: true,
         wishes: "",
@@ -69,11 +69,11 @@ export default function RSVP({
       className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white to-rose-50 scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">
-          RSVP
+        <h2 className="text-lg md:text-2xl lg:text-3xl font-khmer text-center mb-4 text-gray-800">
+          សារជូនពរដល់គូរស្វាមីភរិយាថ្មីមួយគូរនេះ
         </h2>
-        <p className="text-center text-lg text-gray-600 mb-12">
-          We would love to have you celebrate with us!
+        <p className="text-center text-sm md:text-base lg:text-lg text-gray-600 mb-12 font-khmer">
+          តោះមានសារជូនពរអីដល់គូរស្នេហ៏មួយគូរនេះអត់ អ្នកអាចសរសេរខាងក្រោម
         </p>
 
         <div
@@ -85,8 +85,8 @@ export default function RSVP({
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name Field */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Your Name
+              <label className="block text-xs md:text-sm font-khmer text-gray-700 mb-2">
+                ឈ្មោះរបស់អ្នក
               </label>
               <input
                 type="text"
@@ -94,15 +94,16 @@ export default function RSVP({
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                placeholder="Enter your name"
+                placeholder="វ៉ន វីវ៉ា"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
               />
             </div>
 
             {/* Number of Guests */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                How many guests will be joining you?
+              <label className="block text-xs md:text-sm font-khmer text-gray-700 mb-2">
+                តើមានភ្ញៀវប៉ុន្មាននាក់នឹងចូលរួមជាមួយអ្នក?​
+                (អត់ចង់ប្រាប់ក៏បានដែរ)
               </label>
               <select
                 value={formData.guests}
@@ -113,7 +114,7 @@ export default function RSVP({
               >
                 {[1, 2, 3, 4, 5, 6].map((num) => (
                   <option key={num} value={num}>
-                    {num} {num === 1 ? "Guest" : "Guests"}
+                    {num} {num === 1 ? "នាក់" : "នាក់"}
                   </option>
                 ))}
               </select>
@@ -121,8 +122,8 @@ export default function RSVP({
 
             {/* Attendance */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-4">
-                Will you be joining us?
+              <label className="block text-xs md:text-sm font-khmer text-gray-700 mb-4">
+                មកចូលរួមពិធីមង្គលការរបស់ពួកយើងទេ?
               </label>
               <div className="flex gap-4">
                 <button
@@ -134,7 +135,7 @@ export default function RSVP({
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
-                  Yes, I&apos;ll be there! ✓
+                  បាទ/ចាស, ខ្ញុំនឹងទៅ! ✓
                 </button>
                 <button
                   type="button"
@@ -145,42 +146,42 @@ export default function RSVP({
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
-                  Sorry, can&apos;t make it
+                  ទេ, ខ្ញុំមិនអាចទៅបាន
                 </button>
               </div>
             </div>
 
             {/* Wishes Box */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Your Best Wishes & Messages ✨
+              <label className="block text-xs md:text-sm font-khmer text-gray-700 mb-2">
+                សារជូនពរដល់គូរស្វាមីភរិយាថ្មីមួយគូនេះ ✨
               </label>
               <textarea
                 value={formData.wishes}
                 onChange={(e) =>
                   setFormData({ ...formData, wishes: e.target.value })
                 }
-                placeholder="Share your heartfelt message, blessings, or advice for the newlyweds..."
+                placeholder="សារជូនពររបស់អ្នកនៅទីនេះ..."
                 rows={5}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent resize-none"
               />
-              <p className="text-sm text-gray-500 mt-1">
-                {formData.wishes.length} characters
+              <p className="text-xs md:text-sm text-gray-500 mt-1">
+                {formData.wishes.length} អក្សរ
               </p>
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-linear-to-r from-rose-500 to-rose-600 text-white py-4 rounded-lg font-bold text-lg hover:from-rose-600 hover:to-rose-700 transition shadow-lg"
+              className="w-full bg-linear-to-r from-rose-500 to-rose-600 text-white py-4 rounded-lg font-bold text-sm md:text-base lg:text-lg hover:from-rose-600 hover:to-rose-700 transition shadow-lg"
             >
-              {submitted ? "✓ Message Sent!" : "Send My RSVP & Wishes"}
+              {submitted ? "✓ សារត្រូវបានផ្ញើ!" : "ផ្ញើសារជូនពរ"}
             </button>
 
             {submitted && (
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
                 <p className="text-green-700 font-medium">
-                  Thank you! Your RSVP has been received. 💕
+                  សូមអរគុណ! សាររបស់អ្នកត្រូវបានទទួល។ 💕
                 </p>
               </div>
             )}
@@ -189,10 +190,10 @@ export default function RSVP({
 
         {/* Call to action */}
         <div className="text-center mt-12">
-          <p className="text-gray-600">
-            Have questions?{" "}
+          <p className="text-sm md:text-base text-gray-600">
+            ចង់បានវេបសាយចឹងដែរមែន?{" "}
             <span className="text-rose-600 font-semibold">
-              Contact us at phorn.mey@wedding.com
+              ទំនាក់ទំនងមកពួកយើងតាមតេឡេក្រាម 0974242016
             </span>
           </p>
         </div>

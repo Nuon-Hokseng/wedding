@@ -45,45 +45,40 @@ export default function Hero() {
           }`}
         >
           <div className="space-y-4">
-            <p className="text-amber-600 text-lg font-semibold tracking-widest uppercase">
-              Together with their parents
+            <p className="text-amber-600 text-3xl md:text-xl lg:text-2xl font-khmer tracking-widest uppercase text-center md:text-left">
+              សិរីសួស្ដីអាពាហ៏ពិពាហ៍
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-rose-600">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-rose-600 text-center md:text-left">
               Phorn <span className="text-amber-500">&</span> Mey
             </h2>
-            <p className="text-2xl text-rose-500 font-light">
-              request the honor of your presence
+            <p className="text-2xl md:text-lg lg:text-xl text-rose-500 font-khmer text-center md:text-left">
+              សូមគោរពអញ្ជើញលោកអ្នកចូលរួមពិធីមង្គលការរបស់ពួកយើង
             </p>
           </div>
 
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 border-2 border-rose-200 shadow-lg space-y-6">
-            <div className="text-center space-y-4">
-              <p className="text-gray-600 text-base leading-relaxed">
-                Together with their parents
+            <div className="text-center space-y-4 font-khmer">
+              <p className="text-gray-600 text-xs md:text-sm lg:text-base leading-relaxed">
+                មេបាទាំងសងខាង​​ នឹង​​ គូរស្វាមីភរិយា​
               </p>
-              <p className="text-2xl text-gray-800 font-serif font-semibold">
-                Phorn & Mey
+              <p className="text-gray-600 text-xs md:text-sm lg:text-base">
+                សូមគោរពអញ្ជើញឯកឧត្តម/លោកអ្នក ជាទីគោរព
               </p>
-              <p className="text-gray-600">
-                request the honor of your presence, dear
+              <p className="text-xl md:text-2xl lg:text-3xl font-serif text-rose-600 font-semibold cursor-pointer hover:text-rose-700 transition py-2">
+                លោក នួន​ ហុកសេង​ នឹង​ ភរិយា
               </p>
-              <p className="text-3xl font-serif text-rose-600 font-semibold cursor-pointer hover:text-rose-700 transition py-2">
-                Nuon Hokseng
-              </p>
-              <p className="text-gray-600">
-                at the celebration of their marriage
+              <p className="text-gray-600 text-xs md:text-sm lg:text-base">
+                ជាអធិបតីក្នុងពិធីមង្គលការរបស់ពួកយើង
               </p>
             </div>
 
             <div className="border-t-2 border-rose-200 pt-6">
-              <p className="text-center text-gray-700 font-serif space-y-2">
-                <span className="block">
-                  Saturday, 25th of April
+              <p className="text-center text-gray-700 font-serif space-y-2 text-xs md:text-sm lg:text-base">
+                <span className="block">នៅថ្ងៃទី ២៥ ខែ មេសា</span>
+                <span className="block font-bold text-lg md:text-xl lg:text-2xl">
+                  ២០២៦
                 </span>
-                <span className="block font-bold text-2xl">
-                 2026
-                </span>
-                <span className="block">at 5pm</span>
+                <span className="block">នៅវេលាម៉ោង ៥ ល្ងាច</span>
               </p>
             </div>
           </div>
