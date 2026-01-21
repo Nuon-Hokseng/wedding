@@ -3,11 +3,7 @@
 import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-export default function Hero({
-  guestName = "",
-}: {
-  guestName?: string;
-}) {
+export default function Hero({ guestName = "" }: { guestName?: string }) {
   const { ref: containerRef, isVisible: containerVisible } = useScrollAnimation(
     { threshold: 0.1 },
   );
@@ -49,13 +45,22 @@ export default function Hero({
           }`}
         >
           <div className="space-y-4">
-            <p className="text-amber-600 text-3xl md:text-xl lg:text-2xl font-khmer tracking-widest uppercase text-center md:text-left">
-              សិរីសួស្ដីអាពាហ៏ពិពាហ៍
-            </p>
+            <svg viewBox="0 0 500 120" className="w-full max-w-xl">
+              <path id="curve" d="M 50 80 Q 250 20 450 80" fill="transparent" />
+
+              <text
+                fill="#d97706"
+                className="uppercase tracking-widest font-khmer text-4xl lg:text-2xl"
+              >
+                <textPath href="#curve" startOffset="50%" textAnchor="middle">
+                  សិរីសួស្ដីអាពាហ៏ពិពាហ៍
+                </textPath>
+              </text>
+            </svg>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-rose-600 text-center md:text-left">
               Phorn <span className="text-amber-500">&</span> Mey
             </h2>
-            <p className="text-2xl md:text-lg lg:text-xl text-rose-500 font-khmer text-center md:text-left">
+            <p className="text-xl md:text-lg lg:text-xl text-rose-500 font-khmer text-center md:text-left">
               សូមគោរពអញ្ជើញលោកអ្នកចូលរួមពិធីមង្គលការរបស់ពួកយើង
             </p>
           </div>
