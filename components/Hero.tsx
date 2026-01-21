@@ -17,8 +17,29 @@ export default function Hero({ guestName = "" }: { guestName?: string }) {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen xl:pt-20 md:pt-20 pb-10 pt-5 px-4 md:px-8 overflow-hidden"
+      className="relative w-full py-6 md:py-8 px-4 md:px-8 overflow-hidden"
     >
+      <div className="flex flex-col items-center max-w-3xl mx-auto text-center gap-2">
+        <svg viewBox="0 0 500 120" className="w-full max-w-lg mx-auto absolute top-1">
+          <path id="curve" d="M 50 80 Q 250 20 450 80" fill="transparent" />
+
+          <text
+            fill="#d97706"
+            className="uppercase tracking-widest xl:text-4xl font-khmer text-4xl lg:text-2xl"
+          >
+            <textPath href="#curve" startOffset="50%" textAnchor="middle">
+              សិរីសួស្ដីអាពាហ៏ពិពាហ៍
+            </textPath>
+          </text>
+        </svg>
+        <h2 className="xl:mt-20 text-2xl md:text-4xl lg:text-5xl font-bold text-rose-600">
+          Phorn <span className="text-amber-500">&</span> Mey
+        </h2>
+        <br />
+        <p className="text-xl md:text-lg xl:text-3xl text-rose-500 font-khmer">
+          សូមគោរពអញ្ជើញលោកអ្នកចូលរួមពិធីមង្គលការរបស់ពួកយើង
+        </p>
+      </div>
       {/* Decorative floating elements */}
       <div className="absolute top-20 left-10 text-5xl opacity-40 animate-sway">
         🌸
@@ -36,35 +57,13 @@ export default function Hero({ guestName = "" }: { guestName?: string }) {
         ✨
       </div>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center h-full">
-        {/* Left: Invitation Text */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 items-center mt-6">
         <div
           ref={textRef}
-          className={`flex flex-col justify-center space-y-6 scroll-transition ${
+          className={` mt-4 mb-20 flex flex-col justify-center space-y-6 scroll-transition ${
             textVisible ? "scroll-animate-fade-left" : "scroll-hidden-left"
           }`}
         >
-          <div className="space-y-4">
-            <svg viewBox="0 0 500 120" className="w-full max-w-xl">
-              <path id="curve" d="M 50 80 Q 250 20 450 80" fill="transparent" />
-
-              <text
-                fill="#d97706"
-                className="uppercase tracking-widest font-khmer text-4xl lg:text-2xl"
-              >
-                <textPath href="#curve" startOffset="50%" textAnchor="middle">
-                  សិរីសួស្ដីអាពាហ៏ពិពាហ៍
-                </textPath>
-              </text>
-            </svg>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-rose-600 text-center md:text-left">
-              Phorn <span className="text-amber-500">&</span> Mey
-            </h2>
-            <p className="text-xl md:text-lg lg:text-xl text-rose-500 font-khmer text-center md:text-left">
-              សូមគោរពអញ្ជើញលោកអ្នកចូលរួមពិធីមង្គលការរបស់ពួកយើង
-            </p>
-          </div>
-
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 border-2 border-rose-200 shadow-lg space-y-6">
             <div className="text-center space-y-4 font-khmer">
               <p className="text-gray-600 text-xs md:text-sm lg:text-base leading-relaxed">
@@ -89,6 +88,14 @@ export default function Hero({ guestName = "" }: { guestName?: string }) {
                 </span>
                 <span className="block">នៅវេលាម៉ោង ៥ ល្ងាច</span>
               </p>
+            </div>
+            <div className="xl:hidden md:hidden absolute -bottom-13 -right-1 text-4xl z-10">
+              <Image
+                src="/flower1.png"
+                alt="couple picture"
+                width={600}
+                height={600}
+              />
             </div>
           </div>
         </div>
