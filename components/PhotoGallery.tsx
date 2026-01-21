@@ -53,7 +53,7 @@ export default function PhotoGallery() {
     <section
       id="gallery"
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white via-rose-50 to-white scroll-mt-24 md:scroll-mt-32"
+      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white/50 via-rose-50/50 to-white/50 scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl xl:text-5xl md:text-3xl font-khmer text-center mb-4 text-rose-600">

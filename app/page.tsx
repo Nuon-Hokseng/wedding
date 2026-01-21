@@ -8,7 +8,6 @@ import PhotoGallery from "@/components/PhotoGallery";
 import OurStory from "@/components/OurStory";
 import RSVP from "@/components/RSVP";
 import WishesFeed from "@/components/WishesFeed";
-import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   const [wishes, setWishes] = useState<
@@ -149,7 +148,6 @@ export default function Home() {
 
   return (
     <>
-      <AnimatedBackground />
       {!hideOverlay && (
         <div
           className={`overflow-hidden fixed inset-0 z-40 flex items-center justify-center px-6 ${overlayFading ? "transition-opacity duration-700 delay-[1800ms] opacity-0 pointer-events-none" : "opacity-100"}`}
@@ -163,9 +161,7 @@ export default function Home() {
               <p className="text-lg font-medium tracking-wide text-gray-800">
                 អីយ៉ាស! មានសារគេផ្ញេីរមកមួយនេះ!
               </p>
-              <p className="text-sm text-gray-600">
-                សាកចុចមេីលមេីល
-              </p>
+              <p className="text-sm text-gray-600">សាកចុចមេីលមេីល</p>
             </div>
             <button
               type="button"

@@ -128,7 +128,7 @@ export default function OurStory() {
   return (
     <section
       id="story"
-      className="w-full py-20 px-4 md:px-8 bg-white scroll-mt-24 md:scroll-mt-32"
+      className="w-full py-20 px-4 md:px-8 bg-white/50 scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl xl:text-5xl md:text-3xl font-khmer pb-10 text-center mb-4 text-rose-600">
@@ -224,7 +224,8 @@ export default function OurStory() {
         {/* Heart message */}
         <div className="text-center mt-16">
           <p className="text-xl xl:text-3xl md:text-3xl font-khmer text-rose-600 ">
-            ទោះបីជាពួកយេីងស្រលាញ់គ្នាបានរយះពេលយូរជាង ៤​ ឆ្នាំក៏ដោយ​ យេីងចាត់ទុកវាគ្រាន់តែជាការចាប់ផ្ដេីមប៉ុណ្ណោះ💕
+            ទោះបីជាពួកយេីងស្រលាញ់គ្នាបានរយះពេលយូរជាង ៤​ ឆ្នាំក៏ដោយ​
+            យេីងចាត់ទុកវាគ្រាន់តែជាការចាប់ផ្ដេីមប៉ុណ្ណោះ💕
           </p>
         </div>
       </div>

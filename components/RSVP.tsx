@@ -66,7 +66,7 @@ export default function RSVP({
     <section
       id="rsvp"
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white to-rose-50 scroll-mt-24 md:scroll-mt-32"
+      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-white/80 to-rose-50/50 scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-lg md:text-2xl lg:text-3xl font-khmer text-center mb-4 text-gray-800">

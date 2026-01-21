@@ -65,7 +65,7 @@ export default function WeddingDetails() {
     <section
       id="details"
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-white scroll-mt-24 md:scroll-mt-32"
+      className="w-full py-20 px-4 md:px-8 bg-white/50 scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-lg md:text-2xl lg:text-5xl text-rose-600 font-khmer text-center mb-4">

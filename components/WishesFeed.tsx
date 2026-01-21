@@ -43,7 +43,7 @@ export default function WishesFeed({ wishes }: { wishes: Wish[] }) {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-rose-50 via-white to-white"
+      className="w-full py-20 px-4 md:px-8 bg-linear-to-b from-rose-50/50 via-white/50 to-white/50"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-lg md:text-2xl lg:text-5xl font-khmer text-center mb-4 text-gray-800">
