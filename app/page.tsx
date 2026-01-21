@@ -13,6 +13,10 @@ import { supabase } from "@/lib/supabase";
 
 function HomeContent() {
   const searchParams = useSearchParams();
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isMuted, setIsMuted] = useState(false);
+
+  const SONG_START_TIME = 1; // Start at 45 seconds - change this to your preferred time
 
   // Helper function to get cookie value with proper decoding for Unicode (Khmer)
   const getCookie = (name: string) => {
@@ -221,11 +225,49 @@ function HomeContent() {
   const handleOpen = () => {
     if (!overlayFading) {
       setOverlayFading(true);
+      // Start music after a short delay
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.currentTime = SONG_START_TIME;
+          audioRef.current.play().catch((error) => {
+            console.log("Audio playback failed:", error);
+          });
+        }
+      }, 500);
+    }
+  };
+
+  const handleMuteToggle = () => {
+    if (audioRef.current) {
+      audioRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
     }
   };
 
   return (
     <>
+      {/* Audio Element */}
+      <audio ref={audioRef} src="/wedding-song.mp3" loop muted={isMuted} />
+
+      {/* Speaker Button - Only visible when envelope is open */}
+      {overlayFading && (
+        <button
+          onClick={handleMuteToggle}
+          className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-10 h-10 xl:w-14 xl:h-14 rounded-full bg-white border-2 border-rose-600 text-rose-600 hover:bg-rose-50 transition-all shadow-lg"
+          aria-label="Toggle sound"
+        >
+          {isMuted ? (
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.172a1 1 0 011.414 0A6.972 6.972 0 0118 10a6.972 6.972 0 01-1.929 4.928 1 1 0 01-1.414-1.414A4.972 4.972 0 0016 10a4.972 4.972 0 00-1.343-3.464 1 1 0 010-1.414zm-2.828 2.828a1 1 0 011.415 0A4.972 4.972 0 0114 10a4.972 4.972 0 01-1.414 3.536 1 1 0 01-1.415-1.414A2.972 2.972 0 0012 10a2.972 2.972 0 00-.757-2.071 1 1 0 010-1.415z" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.172a1 1 0 011.414 0A6.972 6.972 0 0118 10a6.972 6.972 0 01-1.929 4.928 1 1 0 01-1.414-1.414A4.972 4.972 0 0016 10a4.972 4.972 0 00-1.343-3.464 1 1 0 010-1.414zm-2.828 2.828a1 1 0 011.415 0A4.972 4.972 0 0114 10a4.972 4.972 0 01-1.414 3.536 1 1 0 01-1.415-1.414A2.972 2.972 0 0012 10a2.972 2.972 0 00-.757-2.071 1 1 0 010-1.415z" />
+            </svg>
+          )}
+        </button>
+      )}
+
       {!hideOverlay && (
         <div
           className={`overflow-hidden fixed inset-0 z-40 flex items-center justify-center px-6 ${overlayFading ? "transition-opacity duration-700 delay-[1800ms] opacity-0 pointer-events-none" : "opacity-100"}`}
