@@ -8,7 +8,7 @@ export default function Header({ coupleNames }: { coupleNames: string }) {
           </div>
           <div className="flex flex-col">
             <h1 className="text-xl font-bold text-rose-600">{coupleNames}</h1>
-            <p className="text-xs text-gray-500">April 25, 2026</p>
+            <p className="text-xs text-gray-500">April 23, 2026</p>
           </div>
         </div>
         <nav className="hidden md:flex gap-8 text-sm font-khmer text-gray-600">

@@ -33,7 +33,7 @@ export default function WeddingDetails() {
 
   useEffect(() => {
     const calculateTime = () => {
-      const weddingDate = new Date("2026-04-25T17:00:00").getTime();
+      const weddingDate = new Date("2026-04-23T17:00:00").getTime();
       const now = new Date().getTime();
       const difference = weddingDate - now;
 
@@ -122,7 +122,7 @@ export default function WeddingDetails() {
                     នៅវេលាថ្ងៃទី
                   </p>
                   <p className="text-gray-600 text-md md:text-sm xl:text-lg">
-                    សៅរ៏, មេសា ២៥, ២០២៦
+                    សៅរ៏, មេសា ២៣, ២០២៦
                   </p>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function WeddingDetails() {
                     ទីតាំងស្ថិតនៅ
                   </p>
                   <p className="text-gray-600 text-md md:text-sm text xl:text-lg">
-                    ភូមិ: ភូមិក្របៅ ឃុំ: ក្របៅ ស្រុក: ស្រុកកំចាយមារ ខេត្ត: ខេត្តព្រៃវែង
+                    ភូមិ: ភូមិក្របៅ ឃុំ: ក្របៅ ស្រុក:​កំចាយមារ ខេត្ត: ព្រៃវែង
                     <br />
                     <b>ក្បែរផ្សារក្របៅ</b>
                   </p>

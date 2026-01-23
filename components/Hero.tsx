@@ -85,7 +85,7 @@ export default function Hero({ guestName = "" }: { guestName?: string }) {
 
             <div className="border-t-2 border-rose-200 pt-6">
               <p className="text-center text-gray-700 font-serif space-y-2 text-xs md:text-sm lg:text-base">
-                <span className="block">នៅថ្ងៃទី ២៥ ខែ មេសា</span>
+                <span className="block">នៅថ្ងៃទី ២៣ ខែ មេសា</span>
                 <span className="block font-bold text-lg md:text-xl lg:text-2xl">
                   ២០២៦
                 </span>

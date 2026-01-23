@@ -153,7 +153,7 @@ export default function WishesFeed() {
                 {displayedWishes.map((wish, index) => (
                   <div
                     key={wish.id}
-                    className="shrink-0 w-80 md:w-96 min-h-[320px] group relative z-20"
+                    className="shrink-0 w-80 md:w-96 min-h-80 group relative z-20"
                     style={{
                       animation: `slideIn 0.5s ease-out ${index * 0.1}s forwards`,
                       opacity: 0,
@@ -179,7 +179,7 @@ export default function WishesFeed() {
                       </div>
 
                       {/* Message - Main Content */}
-                      <p className="text-gray-700 leading-relaxed text-base mb-6 flex-grow line-clamp-6 font-medium">
+                      <p className="text-gray-700 leading-relaxed text-base mb-6 grow line-clamp-6 font-medium">
                         {wish.message}
                       </p>
 
@@ -229,7 +229,7 @@ export default function WishesFeed() {
               មិនទាន់មានសារជូនពរទេ...
             </p>
             <p className="text-gray-500 font-khmer text-lg">
-              អ្នកអាចជាមនុស្សដំបូងដែលចែករំលែកសារជូនពរដ៏ស្នេហ៏របស់អ្នក
+              អ្នកអាចជាមនុស្សដំបូងដែលចែករំលែកសារជូនពរបស់អ្នក
             </p>
           </div>
         ) : (
